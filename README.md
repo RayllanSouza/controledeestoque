@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Example Website
+## Demo Page
 
 https://controledeestoque-pr3vlfjnv-rayllan7029.vercel.app/
 
