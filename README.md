@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-# Example Website
+## Example Website
 
 https://controledeestoque-pr3vlfjnv-rayllan7029.vercel.app/
 
@@ -73,11 +73,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# controledeestoque
-
-# controledeestoque
-
-# controledeestoque
-
-# controledeestoque
-
