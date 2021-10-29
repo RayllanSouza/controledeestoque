@@ -11,6 +11,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background: linear-gradient(45deg, #000000, #3E065F, #79259b, #b14cda);
+  background-size: 300% 300%;
+  animation: gradientAnimation 10s ease infinite;
 }
 .login-content{
   display: flex;
@@ -50,10 +53,10 @@ label{
 .button-login:hover{
   transition: 0.2s ease-in;
   background-color: #4f007c;
+  animation: anime1 0.3s infinite;
 }
 .button-login:active{
   background-color: #bdbdbd;
-  animation: anime1 0.1s linear;
 }
 .input-login{
   margin-bottom: 10px;
@@ -86,5 +89,17 @@ label{
   }
   100%{
     transform: translateY(0px);
+  }
+}
+
+@keyframes gradientAnimation {
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 0% 50%;
   }
 }
