@@ -130,7 +130,7 @@ label{
   .button-login:hover{
     transition: 0.2s ease-in;
     background-color: #4f007c;
-    animation: anime1 0.3s infinite;
+    animation: anime1 0.3s linear;
   }
   .button-login:active{
     background-color: #bdbdbd;
