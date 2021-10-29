@@ -32,6 +32,7 @@ form{
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 label{
   font-family: 'Ubuntu', sans-serif;
@@ -61,7 +62,7 @@ label{
 .input-login{
   margin-bottom: 10px;
   padding: 10px;
-  min-width: 300px;
+  width: 90%;
   border: 1px solid #cecece;
   outline: none;
   border-radius: 5px;
@@ -72,6 +73,88 @@ label{
 .img-login{
   width: 300px;
 }
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 425px){
+  .login-content{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    align-items: center;
+    width: 80%;
+    background-color: #707070;
+  }
+  .login-content > h1{
+    padding: 10px;
+    color: #ffffff;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  label{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+  }
+  .button-login{
+    margin-top: 10px;
+    cursor: pointer;
+    width: 60%;
+    padding: 10px;
+    color: #FFFFFF;
+    background-color: #8800d6;
+    border-radius: 5px;
+    border: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+  }
+  .button-login:hover{
+    transition: 0.2s ease-in;
+    background-color: #4f007c;
+    animation: anime1 0.3s infinite;
+  }
+  .button-login:active{
+    background-color: #bdbdbd;
+  }
+  .input-login{
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #cecece;
+    outline: none;
+    border-radius: 5px;
+  }
+  .input-login:focus{
+    border: 1px solid #6f00ff;
+  }
+  .img-login{
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
