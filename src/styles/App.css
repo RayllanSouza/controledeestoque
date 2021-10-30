@@ -3,8 +3,8 @@
 *{
   padding: 0px;
   margin: 0px;
+  overflow: hidden;
 }
-
 .bg{
   width: 100vw;
   height: 100vh;
@@ -14,6 +14,13 @@
   background: linear-gradient(45deg, #000000, #3E065F, #79259b, #b14cda);
   background-size: 300% 300%;
   animation: gradientAnimation 10s ease infinite;
+}
+.bg-home{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(45deg, #1C0C5B, #3D2C8D, #916BBF, #C996CC);
 }
 .login-content{
   display: flex;
@@ -79,6 +86,48 @@ label{
 
 
 
+/* Inicio styles menu */
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #252525;
+}
+
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+nav ul li{
+  padding: 10px;
+}
+nav ul li a{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+nav ul li a:hover{
+  color: #acacac;
+}
+
+
+nav ul li button{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: 0px;
+}
+
+/* Media querys */
 @media (min-width: 320px) and (max-width: 425px){
   .bg{
     width: 100vw;

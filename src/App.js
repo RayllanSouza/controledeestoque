@@ -1,10 +1,17 @@
 import axios from 'axios';
 import { useState } from 'react';
-import './App.css';
+import './styles/App.css';
+import Home from './components/Home';
 import logo from './svgs/login.svg';
+import { IoMdExit } from 'react-icons/io';
+import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 
 function App() {
   const [logged, setLogged] = useState(0);
+  function Exit(){
+    localStorage.removeItem("Token");
+    setLogged(0);
+  }
   function formSubmit(event){
     event.preventDefault();
     const login = event.target[0].value;
@@ -15,14 +22,16 @@ function App() {
     })
     .then(function (response) {
       setLogged(1)
+      console.log(response)
+      localStorage.setItem("Token", response.data.Token)
     })
     .catch(function (error) {
       setLogged(0)
     });
   }
   return (
-    <div className="bg">
-      {logged === 0 ? (
+      logged === 0 ? (
+        <div className="bg">
             <div className="login-content">
             <img src={logo} alt="login svg" className="img-login"/>
             <h1>Login</h1>
@@ -32,10 +41,36 @@ function App() {
               <button type="submit" className="button-login">Entrar</button>
             </form>
           </div>
-      ): logged === 1 ?(<div className="login-content">
-        <h1>Logado</h1>
-    </div>):null}
-    </div>
+        </div>
+      ): logged === 1 ?(
+        <div className="bg-home">
+          <Router>
+            <div>
+              <nav>
+                <ul>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                  <li>
+                    <Link to="/">Estoque</Link>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <a href="/" onClick={()=>Exit()}>Sair&nbsp;<IoMdExit /></a>
+                  </li>
+                </ul>
+              </nav>
+              <Switch>
+                <Route path="/">
+                  <Home />
+                </Route>
+              </Switch>
+            </div>
+          </Router>
+        </div>
+      ):null
+
   );
 }
 
