@@ -5,6 +5,7 @@ import Home from './components/Home';
 import logo from './svgs/login.svg';
 import { IoMdExit } from 'react-icons/io';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import Estoque from './components/Estoque';
 
 function App() {
   const [logged, setLogged] = useState(0);
@@ -45,14 +46,14 @@ function App() {
       ): logged === 1 ?(
         <div className="bg-home">
           <Router>
-            <div>
+            <div className="container-routes">
               <nav>
                 <ul>
                   <li>
                     <Link to="/">Home</Link>
                   </li>
                   <li>
-                    <Link to="/">Estoque</Link>
+                    <Link to="/estoque">Estoque</Link>
                   </li>
                 </ul>
                 <ul>
@@ -62,6 +63,9 @@ function App() {
                 </ul>
               </nav>
               <Switch>
+                <Route path="/estoque">
+                  <Estoque />
+                </Route>
                 <Route path="/">
                   <Home />
                 </Route>
