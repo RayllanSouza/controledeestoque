@@ -11,14 +11,14 @@ function Estoque() {
               <nav>
                 <ul>
                   <li>
-                    <Link to="/">Produtos</Link>
+                    <Link to="/estoque/produtos">Produtos</Link>
                   </li>
                 </ul>
                 <ul>
                 </ul>
               </nav>
               <Switch>
-                <Route path="/">
+                <Route path="/estoque/produtos">
                   <Produtos />
                 </Route>
               </Switch>
