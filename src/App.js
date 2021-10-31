@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
 import Estoque from './components/Estoque';
 
 function App() {
-  const [logged, setLogged] = useState(1);
+  const [logged, setLogged] = useState(0);
   function Exit(){
     localStorage.removeItem("Token");
     setLogged(0);
